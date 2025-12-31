@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DIARY | NAZO.FC</title>
+  <meta name="description" content="NAZO.FC 日記" />
+  <link rel="stylesheet" href="./assets/style.css" />
+  
+</head>
+
+<body>
+  <header>
+    <div class="nav" aria-label="メインナビゲーション">
+      <a class="brand" href="./index.html" aria-label="NAZO.FC トップへ">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          NAZO.FC
+          <small>2008の空気を、いまの見やすさで</small>
+        </div>
+      </a>
+      <div class="actions">
+        <a class="btn" href="./retro.html" title="復刻版へ">真NAZO.FC</a>
+        <button class="btn hamburger" id="menuBtn" aria-label="メニューを開く" aria-controls="drawer" aria-expanded="false">
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">DIARY</h1>
+    <p class="page-sub">短文で残す。長文はだいたい黒歴史になるから。</p>
+
+    <section class="list" aria-label="日記一覧">
+      <article class="entry">
+        <div class="date">2025/12/31</div>
+        <p class="txt">構成整理。共通CSS/JS化。BBSのログが伸びた。伸びすぎた。</p>
+      </article>
+      <article class="entry">
+        <div class="date">2025/12/30</div>
+        <p class="txt">復刻開始。TOPは現代。中身は2008。分裂したまま進める。</p>
+      </article>
+      <article class="entry">
+        <div class="date">2008/06/xx（再現）</div>
+        <p class="txt">部室に将棋盤を置いた。サッカー部なのに。最高。</p>
+      </article>
+      <article class="entry">
+        <div class="date">2008/05/xx（再現）</div>
+        <p class="txt">やまもがハーフラインから撃った。入る気がしないのに撃つ。そこが良い。</p>
+      </article>
+      <article class="entry">
+        <div class="date">2008/04/xx（再現）</div>
+        <p class="txt">男子校の空気、濃度100%。今思うと説明が難しい。</p>
+      </article>
+    </section>
+
+    <div style="margin-top:18px;color:rgba(255,255,255,.55);font-size:12px;border-top:1px solid rgba(255,255,255,.10);padding-top:14px">
+      ※ここは増やすほど“それっぽさ”が出ます。1行ずつでOK。
+    </div>
+  </main>
+
+  <div class="backdrop" id="backdrop" aria-hidden="true"></div>
+  <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="メニュー">
+    <div class="drawerHeader">
+      <strong>MENU</strong>
+      <button class="btn" id="closeBtn" aria-label="メニューを閉じる">閉じる</button>
+    </div>
+    <nav class="menu" aria-label="サイトメニュー">
+      <a href="./index.html"><span>TOP</span><small>スタイリッシュ</small></a>
+      <a href="./retro.html"><span>真NAZO.FC</span><small>復刻版へ</small></a>
+      <a href="./member.html"><span>MEMBER</span><small>紹介</small></a>
+      <a href="./diary.html"><span>DIARY</span><small>短文</small></a>
+      <a href="./gallery.html"><span>GALLERY</span><small>写真枠</small></a>
+      <a href="./bbs.html"><span>BBS</span><small>掲示板</small></a>
+      <a href="./links.html"><span>LINK</span><small>リンク集</small></a>
+      <a href="./contact.html"><span>CONTACT</span><small>連絡</small></a>
+    </nav>
+  </aside>
+
+  <script src="./assets/site.js"></script>
+</body>
+</html>

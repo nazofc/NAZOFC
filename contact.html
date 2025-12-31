@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CONTACT | NAZO.FC</title>
+  <meta name="description" content="NAZO.FC 連絡" />
+  <link rel="stylesheet" href="./assets/style.css" />
+  
+</head>
+
+<body>
+  <header>
+    <div class="nav" aria-label="メインナビゲーション">
+      <a class="brand" href="./index.html" aria-label="NAZO.FC トップへ">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          NAZO.FC
+          <small>2008の空気を、いまの見やすさで</small>
+        </div>
+      </a>
+      <div class="actions">
+        <a class="btn" href="./retro.html" title="復刻版へ">真NAZO.FC</a>
+        <button class="btn hamburger" id="menuBtn" aria-label="メニューを開く" aria-controls="drawer" aria-expanded="false">
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">CONTACT</h1>
+    <p class="page-sub">連絡はできる体裁。送信はまだできない（今は雰囲気）。</p>
+
+    <section class="card form-card" aria-label="お問い合わせフォーム">
+      <form onsubmit="event.preventDefault(); alert('送信（風）しました。※今は保存も送信もされません');">
+        <label for="name">NAME</label>
+        <input id="name" name="name" autocomplete="name" placeholder="例）名無しのNAZO" />
+
+        <label for="mail">EMAIL</label>
+        <input id="mail" name="mail" type="email" autocomplete="email" placeholder="例）nazo@example.com" />
+
+        <label for="msg">MESSAGE</label>
+        <textarea id="msg" name="msg" placeholder="例）上田もNAZO.FCなら俺も…？"></textarea>
+
+        <div class="form-actions">
+          <button class="primary" type="submit">送信（風）</button>
+          <button class="ghost" type="button" onclick="location.href='./member.html'">メンバーを見る</button>
+        </div>
+
+        <p class="hint">
+          ※本当に送信できるようにするなら、フォーム送信先（例：Formspree等）かサーバー側実装が必要。
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <div class="backdrop" id="backdrop" aria-hidden="true"></div>
+  <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="メニュー">
+    <div class="drawerHeader">
+      <strong>MENU</strong>
+      <button class="btn" id="closeBtn" aria-label="メニューを閉じる">閉じる</button>
+    </div>
+    <nav class="menu" aria-label="サイトメニュー">
+      <a href="./index.html"><span>TOP</span><small>スタイリッシュ</small></a>
+      <a href="./retro.html"><span>真NAZO.FC</span><small>復刻版へ</small></a>
+      <a href="./member.html"><span>MEMBER</span><small>紹介</small></a>
+      <a href="./diary.html"><span>DIARY</span><small>短文</small></a>
+      <a href="./gallery.html"><span>GALLERY</span><small>写真枠</small></a>
+      <a href="./bbs.html"><span>BBS</span><small>掲示板</small></a>
+      <a href="./links.html"><span>LINK</span><small>リンク集</small></a>
+      <a href="./contact.html"><span>CONTACT</span><small>連絡</small></a>
+    </nav>
+  </aside>
+
+  <script src="./assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BBS | NAZO.FC</title>
+  <meta name="description" content="NAZO.FC 掲示板（見た目だけ）" />
+  <link rel="stylesheet" href="./assets/style.css" />
+  
+</head>
+
+<body>
+  <header>
+    <div class="nav" aria-label="メインナビゲーション">
+      <a class="brand" href="./index.html" aria-label="NAZO.FC トップへ">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          NAZO.FC
+          <small>2008の空気を、いまの見やすさで</small>
+        </div>
+      </a>
+      <div class="actions">
+        <a class="btn" href="./retro.html" title="復刻版へ">真NAZO.FC</a>
+        <button class="btn hamburger" id="menuBtn" aria-label="メニューを開く" aria-controls="drawer" aria-expanded="false">
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+<body data-page="bbs">
+  <header>
+    <div class="nav" aria-label="メインナビゲーション">
+      <a class="brand" href="./index.html" aria-label="NAZO.FC トップへ">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          NAZO.FC
+          <small>2008の空気を、いまの見やすさで</small>
+        </div>
+      </a>
+      <div class="actions">
+        <a class="btn" href="./retro.html" title="復刻版へ">真NAZO.FC</a>
+        <button class="btn hamburger" id="menuBtn" aria-label="メニューを開く" aria-controls="drawer" aria-expanded="false">
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">BBS</h1>
+    <p class="page-sub">
+      男子校サッカー部の“言語化できない空気”を、2008の掲示板に封印。<br/>
+      ここに書かれたことは、だいたい意味が分からない（のが正解）。
+    </p>
+
+    <section class="bbs" aria-label="掲示板">
+      <div class="notice">
+        <strong>【注意】</strong><br/>
+        ・荒らし禁止（荒らしは“走り込み”）<br/>
+        ・個人情報NG（苗字フル/連絡先/場所の特定はやめとけ）<br/>
+        ・男子校サッカー部のノリはOK（ただし説明しない）<br/>
+        ・上田（部長）が出てくると全部NAZO.FC扱いになります
+      </div>
+
+      <div class="controls" aria-label="表示情報">
+        <span class="chip">表示No.はページを開くたびに変わる</span>
+        <span class="chip">投稿（風）はこのページ内だけ</span>
+        <span class="chip">意味が分からなくてOK</span>
+      </div>
+
+      <div class="composer" aria-label="投稿フォーム（風）">
+        <form id="fakePostForm">
+          <div class="row" style="display:grid;gap:10px">
+            <div>
+              <label for="handle">NAME（ハンドル）</label>
+              <input id="handle" name="handle" placeholder="例）名無しの三学" />
+            </div>
+            <div>
+              <label for="title">TITLE（件名）</label>
+              <input id="title" name="title" placeholder="例）今日の練習、何それ" />
+            </div>
+            <div>
+              <label for="msg">MESSAGE（本文）</label>
+              <textarea id="msg" name="msg" placeholder="例）ボールより将棋盤のほうが重い。"></textarea>
+            </div>
+          </div>
+          <div class="actions-row">
+            <button class="primary" type="submit">投稿（風）</button>
+            <button class="ghost" type="button" onclick="location.href='./member.html'">MEMBERへ</button>
+            <button class="ghost" type="button" onclick="location.href='./retro.html'">真NAZO.FCへ</button>
+          </div>
+          <div class="hint">※送信しても保存されない。リロードで消える。それがBBS。</div>
+        </form>
+      </div>
+
+      <div class="threads" id="threadList" aria-label="スレッド（再現ログ）">
+
+        <article class="post" data-base="1">
+          <div class="post-meta">
+            <span class="post-name">やまも</span>
+            <span class="badge">突撃隊長</span>
+            <span class="badge">2008/05/xx 17:41</span>
+            <span class="badge noBadge">No.----</span>
+          </div>
+          <div class="post-body">ハーフラインから撃った。
+入るかどうかじゃない。撃つかどうかだ。</div>
+          <div class="quote">＞誰か：そこから打つん？
+＞やまも：打つ（反射）</div>
+        </article>
+
+        <article class="post" data-base="2">
+          <div class="post-meta">
+            <span class="post-name">きくつ</span>
+            <span class="badge">部下</span>
+            <span class="badge">2008/06/xx 19:03</span>
+            <span class="badge noBadge">No.----</span>
+          </div>
+          <div class="post-body">部室に将棋盤を置いた。
+サッカー部なのに。
+合理性？知らん。</div>
+          <div class="quote">＞誰か：なんで？
+＞きくつ：そこに部室があるから</div>
+        </article>
+
+        <article class="post" data-base="3">
+          <div class="post-meta">
+            <span class="post-name">山上</span>
+            <span class="badge">CB</span>
+            <span class="badge">2008/06/xx 20:10</span>
+            <span class="badge noBadge">No.----</span>
+          </div>
+          <div class="post-body">守備のコツは「先に立っておく」。
+読書のコツも「先に開いておく」。
+以上。</div>
+          <div class="quote">＞やまも：先に撃っておく、もある
+＞山上：それは知らない</div>
+        </article>
+
+        <article class="post" data-base="4">
+          <div class="post-meta">
+            <span class="post-name">中前（ハムウナム）</span>
+            <span class="badge">GK</span>
+            <span class="badge">2008/07/xx 07:02</span>
+            <span class="badge noBadge">No.----</span>
+          </div>
+          <div class="post-body">ゴールの中って、意外と寒い。
+あと、声出すと自分に返ってくる。</div>
+          <div class="quote">＞きくつ：哲学か
+＞中前：寒いだけ</div>
+        </article>
+
+        <article class="post" data-base="5">
+          <div class="post-meta">
+            <span class="post-name">飯川涼</span>
+            <span class="badge">伝説</span>
+            <span class="badge">2008/07/xx 25:61</span>
+            <span class="badge noBadge">No.----</span>
+          </div>
+          <div class="post-body">存在してる。
+存在してないって言うやつが存在してない。</div>
+          <div class="quote">＞上田（部長）：全員NAZO.FC
+＞全員：え？</div>
+        </article>
+
+        <article class="post" data-base="6">
+          <div class="post-meta">
+            <span class="post-name">上田（部長）</span>
+            <span class="badge">部長</span>
+            <span class="badge">2008/08/xx 18:00</span>
+            <span class="badge noBadge">No.----</span>
+          </div>
+          <div class="post-body">いいか。
+「NAZO.FCかどうか」じゃない。
+「お前がNAZO.FC」なんだ。</div>
+          <div class="quote">＞名無し：部長、関係あります？
+＞上田：ある（断言）</div>
+        </article>
+
+        <article class="post" data-base="7">
+          <div class="post-meta">
+            <span class="post-name">名無しの三学</span>
+            <span class="badge">男子校サッカー部の空気</span>
+            <span class="badge">2008/09/xx 16:20</span>
+            <span class="badge noBadge">No.----</span>
+          </div>
+          <div class="post-body">練習の集合時間の“5分前”って何分前？
+3分前は遅い。
+7分前は真面目すぎる。
+つまり5分前は、5分前。</div>
+          <div class="quote">＞やまも：撃つ時間はある
+＞山上：ない</div>
+        </article>
+
+        <article class="post" data-base="8">
+          <div class="post-meta">
+            <span class="post-name">テンプレ職人</span>
+            <span class="badge">荒らし風（安全）</span>
+            <span class="badge">2008/09/xx 18:12</span>
+            <span class="badge noBadge">No.----</span>
+          </div>
+          <div class="post-body">【テンプレ】
+・まず深呼吸
+・次に走り込み
+・それでもムカつくなら水飲め
+・最後に「了解です」って書け</div>
+          <div class="quote">＞名無し：荒れるとどうなる？
+＞上田：走る</div>
+        </article>
+
+        <article class="post" data-base="9">
+          <div class="post-meta">
+            <span class="post-name">部室語録bot</span>
+            <span class="badge">語録</span>
+            <span class="badge">2008/10/xx 07:55</span>
+            <span class="badge noBadge">No.----</span>
+          </div>
+          <div class="post-body">「ボールは友達」より先に
+「水筒が命」って言ってたやつ、誰。</div>
+          <div class="quote">＞中前：GKは水筒が命
+＞やまも：撃つ前に飲む</div>
+        </article>
+
+        <article class="post" data-base="10">
+          <div class="post-meta">
+            <span class="post-name">名無しの副審</span>
+            <span class="badge">練習試合の謎ルール</span>
+            <span class="badge">2008/10/xx 12:30</span>
+            <span class="badge noBadge">No.----</span>
+          </div>
+          <div class="post-body">【謎ルール】
+副審の旗が見えない時は
+「見えないので無効」になる。</div>
+          <div class="quote">＞山上：見えないなら立っておけ
+＞名無し：その通りです</div>
+        </article>
+
+        <article class="post" data-base="11">
+          <div class="post-meta">
+            <span class="post-name">やまも</span>
+            <span class="badge">突撃隊長</span>
+            <span class="badge">2008/10/xx 16:04</span>
+            <span class="badge noBadge">No.----</span>
+          </div>
+          <div class="post-body">練習試合のアップで一回撃った。
+アップはアップ。
+撃つのは撃つ。</div>
+          <div class="quote">＞名無し：まだ試合始まってない
+＞やまも：始めた（気持ち）</div>
+        </article>
+
+        <article class="post" data-base="12">
+          <div class="post-meta">
+            <span class="post-name">きくつ</span>
+            <span class="badge">部下</span>
+            <span class="badge">2008/11/xx 21:11</span>
+            <span class="badge noBadge">No.----</span>
+          </div>
+          <div class="post-body">【部室ルール】
+将棋盤の上にスパイク置いたら負け。
+負けたら走る。
+勝っても走る。</div>
+          <div class="quote">＞上田：走る理由は作れる
+＞きくつ：名言やめて</div>
+        </article>
+
+        <article class="post" data-base="13">
+          <div class="post-meta">
+            <span class="post-name">山上</span>
+            <span class="badge">CB</span>
+            <span class="badge">2008/11/xx 22:10</span>
+            <span class="badge noBadge">No.----</span>
+          </div>
+          <div class="post-body">部室の椅子、誰も座らないのに壊れる。
+男子校の椅子は、気配で壊れる。</div>
+          <div class="quote">＞名無し：怖い
+＞山上：現実</div>
+        </article>
+
+        <article class="post" data-base="14">
+          <div class="post-meta">
+            <span class="post-name">中前（ハムウナム）</span>
+            <span class="badge">GK</span>
+            <span class="badge">2008/12/xx 06:58</span>
+            <span class="badge noBadge">No.----</span>
+          </div>
+          <div class="post-body">【GKあるある】
+声出すと「声出してる自分」が気になって
+次の瞬間、シュートが来る。</div>
+          <div class="quote">＞やまも：来る（撃つ）
+＞中前：黙れ</div>
+        </article>
+
+        <article class="post" data-base="15">
+          <div class="post-meta">
+            <span class="post-name">テンプレ職人</span>
+            <span class="badge">荒らし風（安全）</span>
+            <span class="badge">2008/12/xx 23:59</span>
+            <span class="badge noBadge">No.----</span>
+          </div>
+          <div class="post-body">【大事なお知らせ】
+このスレは“走り込み推奨”です。
+反論は受け付けますが、まず走ってから。</div>
+          <div class="quote">＞名無し：それ荒らし？
+＞テンプレ職人：違う、健康</div>
+        </article>
+
+        <article class="post" data-base="16">
+          <div class="post-meta">
+            <span class="post-name">飯川涼</span>
+            <span class="badge">伝説</span>
+            <span class="badge">2009/01/xx 00:08</span>
+            <span class="badge noBadge">No.----</span>
+          </div>
+          <div class="post-body">あけおめ。
+今年の目標：存在する。</div>
+          <div class="quote">＞上田：すでにNAZO.FC
+＞飯川：やめろ</div>
+        </article>
+
+        <article class="post" data-base="17">
+          <div class="post-meta">
+            <span class="post-name">名無しの主将候補</span>
+            <span class="badge">部室語録</span>
+            <span class="badge">2009/01/xx 18:30</span>
+            <span class="badge noBadge">No.----</span>
+          </div>
+          <div class="post-body">「声出せ」って言われて声出したら
+「声が薄い」って言われた。
+濃度って何。</div>
+          <div class="quote">＞山上：濃度は出せ
+＞名無し：理科か</div>
+        </article>
+
+        <article class="post" data-base="18">
+          <div class="post-meta">
+            <span class="post-name">名無しの審判</span>
+            <span class="badge">練習試合の謎ルール</span>
+            <span class="badge">2009/02/xx 13:20</span>
+            <span class="badge noBadge">No.----</span>
+          </div>
+          <div class="post-body">【謎ルール】
+ファウルかどうか迷ったら
+「声が大きい方」が勝つ。</div>
+          <div class="quote">＞中前：GKが有利
+＞やまも：撃つ声で勝つ</div>
+        </article>
+
+        <article class="post" data-base="19">
+          <div class="post-meta">
+            <span class="post-name">きくつ</span>
+            <span class="badge">部下</span>
+            <span class="badge">2009/02/xx 19:19</span>
+            <span class="badge noBadge">No.----</span>
+          </div>
+          <div class="post-body">自転車通学、やっぱり中学前半だけ説が濃厚。
+でも“自転車通学”って言い続けたら
+それが真実になる（気がする）。</div>
+          <div class="quote">＞上田：言い続けろ
+＞きくつ：部長、圧が強い</div>
+        </article>
+
+        <article class="post" data-base="20">
+          <div class="post-meta">
+            <span class="post-name">山上</span>
+            <span class="badge">CB</span>
+            <span class="badge">2009/03/xx 21:40</span>
+            <span class="badge noBadge">No.----</span>
+          </div>
+          <div class="post-body">読書してると時間が溶ける。
+走り込みしても時間が溶ける。
+どっちも溶けるなら、本が勝ち。</div>
+          <div class="quote">＞やまも：撃つのが勝ち
+＞山上：議論しない</div>
+        </article>
+
+        <article class="post" data-base="21">
+          <div class="post-meta">
+            <span class="post-name">名無しの対戦相手</span>
+            <span class="badge">練習試合の謎ルール</span>
+            <span class="badge">2009/03/xx 15:01</span>
+            <span class="badge noBadge">No.----</span>
+          </div>
+          <div class="post-body">【謎ルール】
+試合後に「ありがとうございました」って言う時、
+声が揃ったら勝ち。</div>
+          <div class="quote">＞名無し：それ勝敗どこ？
+＞上田：そこ</div>
+        </article>
+
+        <article class="post" data-base="22">
+          <div class="post-meta">
+            <span class="post-name">テンプレ職人</span>
+            <span class="badge">荒らし風（安全）</span>
+            <span class="badge">2009/04/xx 10:10</span>
+            <span class="badge noBadge">No.----</span>
+          </div>
+          <div class="post-body">【質問テンプレ】
+Q：それって本当？
+A：知らんけど
+Q：なんで書いた？
+A：走り込みの合間</div>
+          <div class="quote">＞山上：知らんけど禁止
+＞テンプレ職人：了解です</div>
+        </article>
+
+        <article class="post" data-base="23">
+          <div class="post-meta">
+            <span class="post-name">中前（ハムウナム）</span>
+            <span class="badge">GK</span>
+            <span class="badge">2009/04/xx 06:45</span>
+            <span class="badge noBadge">No.----</span>
+          </div>
+          <div class="post-body">【部室語録】
+「キーパーグローブは洗うな」
+「いや洗え」
+結論：洗ったら乾かす時間がない。</div>
+          <div class="quote">＞きくつ：じゃあ洗うな
+＞中前：極端</div>
+        </article>
+
+        <article class="post" data-base="24">
+          <div class="post-meta">
+            <span class="post-name">やまも</span>
+            <span class="badge">突撃隊長</span>
+            <span class="badge">2009/05/xx 17:17</span>
+            <span class="badge noBadge">No.----</span>
+          </div>
+          <div class="post-body">【練習試合ルール】
+前半は様子見。
+後半は撃つ。</div>
+          <div class="quote">＞名無し：前半も撃ってる
+＞やまも：様子見の撃ち</div>
+        </article>
+
+        <article class="post" data-base="25">
+          <div class="post-meta">
+            <span class="post-name">名無しの部室</span>
+            <span class="badge">部室語録</span>
+            <span class="badge">2009/05/xx 20:02</span>
+            <span class="badge noBadge">No.----</span>
+          </div>
+          <div class="post-body">「誰のスパイクか分からん」って言いながら
+全員のスパイクが似てるの、男子校。</div>
+          <div class="quote">＞上田：似てるのが団結
+＞名無し：怖い団結</div>
+        </article>
+
+        <article class="post" data-base="26">
+          <div class="post-meta">
+            <span class="post-name">飯川涼</span>
+            <span class="badge">伝説</span>
+            <span class="badge">2009/06/xx 02:22</span>
+            <span class="badge noBadge">No.----</span>
+          </div>
+          <div class="post-body">いま部室にいる。
+いま部室にいない。
+どっちも俺。</div>
+          <div class="quote">＞山上：量子
+＞飯川：サッカー</div>
+        </article>
+
+        <article class="post" data-base="27">
+          <div class="post-meta">
+            <span class="post-name">名無しのマネージャー（存在しない）</span>
+            <span class="badge">荒らし風（安全）</span>
+            <span class="badge">2009/06/xx 09:00</span>
+            <span class="badge noBadge">No.----</span>
+          </div>
+          <div class="post-body">【速報】
+マネージャー来ました（来てない）。</div>
+          <div class="quote">＞全員：うおおお
+＞上田：走れ
+＞全員：はい…</div>
+        </article>
+
+        <article class="post" data-base="28">
+          <div class="post-meta">
+            <span class="post-name">きくつ</span>
+            <span class="badge">部下</span>
+            <span class="badge">2009/07/xx 19:30</span>
+            <span class="badge noBadge">No.----</span>
+          </div>
+          <div class="post-body">将棋盤の角に足ぶつけた。
+これ、サッカーの怪我じゃない。</div>
+          <div class="quote">＞やまも：撃てば治る
+＞きくつ：治らん</div>
+        </article>
+
+        <article class="post" data-base="29">
+          <div class="post-meta">
+            <span class="post-name">山上</span>
+            <span class="badge">CB</span>
+            <span class="badge">2009/07/xx 22:02</span>
+            <span class="badge noBadge">No.----</span>
+          </div>
+          <div class="post-body">男子校は、会話が短い。
+「おう」
+「うす」
+「行く？」
+「行く」
+以上で全て伝わる（伝わってない）。</div>
+          <div class="quote">＞名無し：伝わってない
+＞山上：そう</div>
+        </article>
+
+        <article class="post" data-base="30">
+          <div class="post-meta">
+            <span class="post-name">上田（部長）</span>
+            <span class="badge">部長</span>
+            <span class="badge">2009/08/xx 18:00</span>
+            <span class="badge noBadge">No.----</span>
+          </div>
+          <div class="post-body">最後に言う。
+BBSは心。
+心が荒れたら、走る。</div>
+          <div class="quote">＞テンプレ職人：了解です
+＞上田：よし</div>
+        </article>
+
+      </div>
+
+      <div class="footerNote" style="margin-top:16px;color:rgba(255,255,255,.55);font-size:12px;border-top:1px solid rgba(255,255,255,.10);padding-top:14px;line-height:1.7">
+        ※このBBSは静的ページです。投稿（風）はページ内に出ますが保存されません。<br/>
+        ＝2008の「残らない感じ」も再現。
+      </div>
+    </section>
+  </main>
+
+  <div class="backdrop" id="backdrop" aria-hidden="true"></div>
+  <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="メニュー">
+    <div class="drawerHeader">
+      <strong>MENU</strong>
+      <button class="btn" id="closeBtn" aria-label="メニューを閉じる">閉じる</button>
+    </div>
+    <nav class="menu" aria-label="サイトメニュー">
+      <a href="./index.html"><span>TOP</span><small>スタイリッシュ</small></a>
+      <a href="./retro.html"><span>真NAZO.FC</span><small>復刻版へ</small></a>
+      <a href="./member.html"><span>MEMBER</span><small>紹介</small></a>
+      <a href="./diary.html"><span>DIARY</span><small>短文</small></a>
+      <a href="./gallery.html"><span>GALLERY</span><small>写真枠</small></a>
+      <a href="./bbs.html"><span>BBS</span><small>掲示板</small></a>
+      <a href="./links.html"><span>LINK</span><small>リンク集</small></a>
+      <a href="./contact.html"><span>CONTACT</span><small>連絡</small></a>
+    </nav>
+  </aside>
+
+  <script src="./assets/site.js"></script>
+</body>
+</html>
